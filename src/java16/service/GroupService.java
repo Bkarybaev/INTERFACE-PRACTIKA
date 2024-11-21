@@ -1,4 +1,10 @@
 package java16.service;
 
-public interface gg {
+import java16.mosels.Group;
+
+public interface GroupService {
+
+    void addGroup(Group newGroup);
+
+    Group[] getAllGroup();
 }
