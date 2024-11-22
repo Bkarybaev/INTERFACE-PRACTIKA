@@ -11,5 +11,20 @@ public interface GroupDao {
 
     void addByGroupName(String groupName, Student newStudent);
 
+    Student[] getAllStudent();
+
+    void deletedGroupId(Long groupId);
+
+    Group findById(Long groupId);
+
+    Student findByIdStudent(Long StudentId);
+
+    void findByGroupName(String groupName);
+
+    void findByStudentName(String firstName);
+
+
+
+
 
 }

@@ -5,11 +5,15 @@ import java.util.Arrays;
 public class Group {
     private Long id;
     private String groupName;
-    private Student[] students;
+    private Student[] students = new Student[0];
+
+    public Group() {
+    }
 
     public Group(Long id, String groupName) {
         this.id = id;
         this.groupName = groupName;
+
     }
     public Group(Student[] students){
         this.students = students;
@@ -37,6 +41,11 @@ public class Group {
 
     public void setStudents(Student[] students) {
         this.students = students;
+    }
+
+    public void addStudent(Student students1){
+        students = Arrays.copyOf(students, students.length + 1);
+        students[students.length - 1] = students1;
     }
 
     @Override

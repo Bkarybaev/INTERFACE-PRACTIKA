@@ -2,6 +2,7 @@ package java16.service.impl;
 
 import java16.dao.GroupDao;
 import java16.mosels.Group;
+import java16.mosels.Student;
 import java16.service.GroupService;
 
 public class GroupServiceImpl implements GroupService {
@@ -21,4 +22,21 @@ public class GroupServiceImpl implements GroupService {
     public Group[] getAllGroup() {
         return groupDao.getAllGroup();
     }
+
+    @Override
+    public void deletedGroupId(Long groupId) {
+         groupDao.deletedGroupId(groupId);
+    }
+
+    @Override
+    public Group findById(Long groupId) {
+        return groupDao.findById(groupId);
+    }
+
+    @Override
+    public void findByGroupName(String groupName) {
+        groupDao.findByGroupName(groupName);
+    }
+
+
 }
